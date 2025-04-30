@@ -1,0 +1,9 @@
+<div class="gameContainer" (mouseover)="setGameAsViewed()" [ngClass]="{viewed: game.isViewed}" (click)="goToGame()">
+  @if (game.rate>0) {
+  <div class="rate">{{ game.rate }}</div>
+  }
+  <h2>{{ game.title }}</h2>
+  <p>{{ game.country }} - {{ game.companyName }} - pegi {{ game.pegi }}</p>
+  <img [src]="game.imagePath" [alt]="'Tile du jeu '+game.name"/>
+  <p>Durée : {{ game.timeSpent }}h</p>
+</div>

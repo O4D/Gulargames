@@ -1,0 +1,7 @@
+<!-- affichages des jeux (#for) -->
+<div class="container">
+  @for (aGame of AllGames; track aGame.id) {
+
+    <app-game [game]="aGame"/>
+  }
+</div>

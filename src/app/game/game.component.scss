@@ -1,0 +1,30 @@
+:host{
+  flex: 2;
+  height:  90vh; //(Viewport Height)
+  max-height: 85vh; //(Viewport Height)
+  overflow: hidden;
+  min-width: 500px;
+  background: #fff;
+  margin:0 15px 0 0;
+  box-shadow: 10px 20px 20px #ccc;
+  padding: 1vh 1vw;
+
+  img {
+    width: 100%;
+  }
+}
+
+h2 {
+  font-size: 20px;
+}
+
+.rate {
+  text-align: center;
+  float:right;
+  width: 35px;
+  padding: 5px;
+  font-size: 20px;
+  color: #fff;
+  background-color: #997800;
+  border-radius: 50%;
+}

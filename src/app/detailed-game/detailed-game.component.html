@@ -1,0 +1,9 @@
+<div class="gameContainer">
+  <h2>{{ game.title }}</h2>
+  <p>{{ game.country }} - {{ game.companyName }} - pegi {{ game.pegi }}</p>
+  <img [src]="game.imagePath" [alt]="'Tile du jeu '+game.name"/>
+  <h3>{{ game.name }}</h3>
+  <p>{{ game.text_conclusion }}</p>
+  <p>{{ game.timeSpent }}</p>
+  <div class=".rate">{{ game.rate }}</div>
+</div>

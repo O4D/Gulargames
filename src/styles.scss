@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+html{
+  padding: 0;
+  font-family: "Bell Gothic Std";
+}
+
+h1, h2 {
+  font-family: "Bell Gothic Std Black";
+}
+
+body{
+  margin:0;
+  background: #eee;
+  padding: 0;
+}
+
+a,a:visited{
+  text-decoration: none;
+  color: initial;
+}
+
+a:hover{
+  text-decoration: underline;
+}
+
