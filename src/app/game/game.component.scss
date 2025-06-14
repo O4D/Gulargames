@@ -1,17 +1,40 @@
-:host{
-  flex: 2;
-  height:  90vh; //(Viewport Height)
-  max-height: 85vh; //(Viewport Height)
+.gameContainer{
+  display: flex;
+  height:90%;
+  width: 20vw;
+  min-width: 328px;
+  flex-direction: column;
   overflow: hidden;
-  min-width: 500px;
-  background: #fff;
-  margin:0 15px 0 0;
-  box-shadow: 10px 20px 20px #ccc;
-  padding: 1vh 1vw;
+  background: transparent;
+  margin:0 30px 0 0;
+  padding:5px;
 
-  img {
+  .illus-box {
+    display: block;
+    vertical-align: bottom;
+    background-position: top center;
+    background-clip: border-box;
+    background-size: cover;
+    flex: 90%;
     width: 100%;
+    padding: 0;
+      border-radius: 5px;
+    box-shadow: 0 4px 3px #999999;
   }
+  p:last-child{
+    margin: 5px 0 0 0;
+    line-height: 1em;
+  }
+
+  h4{
+    margin: 0;
+    padding: 0;
+    flex:20px;
+  }
+}
+
+.playing{
+  height:87.5%;
 }
 
 h2 {
@@ -19,12 +42,19 @@ h2 {
 }
 
 .rate {
-  text-align: center;
+  display: inline-block;
+  vertical-align: center;
+  background-image: url("/assets/icones/Star.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
   float:right;
-  width: 35px;
-  padding: 5px;
+  text-align: center;
+  font-family:"Bell Gothic Std Black";
+  width:60px;
+  height:35px;
+  padding-top:25px;
+  margin: -70px 0px 0px 0;
   font-size: 20px;
   color: #fff;
-  background-color: #997800;
-  border-radius: 50%;
 }

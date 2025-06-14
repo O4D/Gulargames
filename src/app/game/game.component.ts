@@ -1,13 +1,14 @@
 import {Component, Input} from '@angular/core';
-import {Game} from '../models/game';
-import {NgClass} from '@angular/common';
+import {Game, GamesStatus} from '../models/game';
+import {DatePipe, formatDate, NgClass} from '@angular/common';
 import {Router} from '@angular/router';
 
 @Component({
   standalone: true,
   selector: 'app-game',
   imports: [
-    NgClass
+    NgClass,
+    DatePipe
   ],
   templateUrl: './game.component.html',
   styleUrl: './game.component.scss'
@@ -31,4 +32,7 @@ export class GameComponent {
   {
     this.router.navigate(['/game', this.game.id]);
   }
+
+  protected readonly GamesStatus = GamesStatus;
+  protected readonly formatDate = formatDate;
 }

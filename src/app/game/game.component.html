@@ -1,9 +1,20 @@
-<div class="gameContainer" (mouseover)="setGameAsViewed()" [ngClass]="{viewed: game.isViewed}" (click)="goToGame()">
-  @if (game.rate>0) {
-  <div class="rate">{{ game.rate }}</div>
+<div class="gameContainer" (mouseover)="setGameAsViewed()" [ngClass]="{playing: game.status === GamesStatus.CurrentlyPlaying}" (click)="goToGame()">
+  @if (game.status !== GamesStatus.CurrentlyPlaying){
+  <!-- <h2>{{ game.title }}</h2> -->
+    <h4>{{ game.kind }}  <span style="float:right; font-family: Calibri; font-weight: normal;">Terminée le {{ game.completionDate | date }}</span></h4>
   }
-  <h2>{{ game.title }}</h2>
-  <p>{{ game.country }} - {{ game.companyName }} - pegi {{ game.pegi }}</p>
-  <img [src]="game.imagePath" [alt]="'Tile du jeu '+game.name"/>
-  <p>Durée : {{ game.timeSpent }}h</p>
+  <div class="illus-box" style="background-image: url('{{game.imagePath}}');" [title]="'Tile du jeu '+game.name">
+  </div>
+  @if (game.status !== GamesStatus.CurrentlyPlaying){
+    <p><span  style="font-weight: bold">Durée : {{ game.timeSpent }}h</span><br/>
+      {{game.shortMessage}}
+
+
+    @if (game.rate>0) {
+      <div class="rate">
+        {{ game.rate }}
+      </div>
+    }
+  </p>
+  }
 </div>

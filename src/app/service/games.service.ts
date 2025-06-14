@@ -1,6 +1,5 @@
 import {Injectable} from '@angular/core';
 import {Game, GamesStatus} from '../models/game';
-import {Params} from '@angular/router';
 
 @Injectable({
     providedIn: 'root'
@@ -9,32 +8,67 @@ export class GamesService
 {
   private AllGames = [
     new Game(
-      "Le Cerceau de pouvoir...",
-      'assets/tiles/ring_fit_adventure.jpg',
-      'Nintendo',
+      "L'avènement du FRPG",
+      "Quand l'hommage au JRPG devient une superbe relève",
+      'assets/jaquettes/clair-obscur.png',
+      'Daedalic Entertainment',
       16,
-      'Japon',
+      'France',
       'To write...',
-      'RingFit Adventures',
-      'To write...',
-      0,
-      25,
+      'Clair Obscur : Expedition 33',
+      'Le jeu surprend par ses rebondissements, ses thèmes variés et regorge de ligne de dialogue qui font de State Of Mind un jeu qui se savoure comme on lit un livre. Petite production, les quelques décors sont soignés, les personnages bien écris et les phases de recherches originales. En bonne SF, le jeu questionne par ses analogies avec le réel qui vont jusqu\'à nous faire nous demander ce qui, pour nous, doit vraiment faire partie de notre réalité.',
+      5,
+      80,
       GamesStatus.CurrentlyPlaying,
+      "RPG"
+    ),new Game(
+      "Vers l'ennuie et l'au-delà",
+      "L'espace, infini, vide... et buggué",
+      'assets/jaquettes/starfield.webp',
+      'Bethesda',
+      16,
+      'USA',
+      'To write...',
+      'Starfield',
+      'To write...',
+      2.5,
+      200,
+      GamesStatus.ToWrite,
+    ),new Game(
+      "Sans nom",
+      "Une quête d'identité surprenante",
+      'assets/jaquettes/planescape-torment.jpg',
+      'Atelier QDB',
+      16,
+      'France',
+      'To write...',
+      'Planescape : Torment',
+      'To write...',
+      5,
+      70,
+      GamesStatus.ToWrite,
+    "Enquête",
+      new Date(2021,3,10)
     ),
     new Game(
-      "'Second Life'",
-      'assets/tiles/state_of_mind.jpg',
+      "Age of Empire 2",
+      "Ohlolooooooo",
+      'assets/jaquettes/aoe2.jpg',
       'Daedalic Entertainment',
       16,
       'Allemagne',
       'To write...',
       'State of Mind',
       'Le jeu surprend par ses rebondissements, ses thèmes variés et regorge de ligne de dialogue qui font de State Of Mind un jeu qui se savoure comme on lit un livre. Petite production, les quelques décors sont soignés, les personnages bien écris et les phases de recherches originales. En bonne SF, le jeu questionne par ses analogies avec le réel qui vont jusqu\'à nous faire nous demander ce qui, pour nous, doit vraiment faire partie de notre réalité.',
-      3.5,
-      20
+      4,
+      86,
+      GamesStatus.Completed,
+      "RTS",
+      new Date(2012,11,20)
     ),new Game(
-      'Carnage Psychotique',
-      'assets/tiles/decarnation.jpg',
+      'The City Builder',
+      "Les fondations simple et maîtrisé d'un genre à part entière",
+      'assets/jaquettes/simcity-4.jpg',
       'Atelier QDB',
       16,
       'France',
@@ -42,8 +76,9 @@ export class GamesService
       'Décarnation',
       'To write...',
       5,
-      12,
-      GamesStatus.ToWrite
+      100,
+      GamesStatus.ToWrite,
+      "STR"
     )];
 
   constructor()

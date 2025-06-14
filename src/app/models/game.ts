@@ -5,6 +5,7 @@ export class Game {
   public id: number;
 
   constructor(public name: string,
+              public shortMessage:string,
               public imagePath: string,
               public companyName:string,
               public pegi:number,
@@ -14,7 +15,9 @@ export class Game {
               public text_conclusion:string,
               public rate:number,
               public timeSpent:number=10,
-              public status:GamesStatus = GamesStatus.Completed)
+              public status:GamesStatus = GamesStatus.Completed,
+              public kind:string="Action",
+              public completionDate:Date = new Date())
   {
     this.id = Game.currentId++;
     console.log("this.id",this.id);

@@ -1,11 +1,23 @@
 
-.container{
-  display: flex;
+.container
+{
+  padding-left: 50px;
   flex-direction: row;
-  padding: 10px;
-  max-height: 90vh;
+  display: flex;
+  height: 75vh;
+  scroll-behavior: smooth;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  perspective: 60vw;
 }
 
-.container > :first-child {
-    flex: 2.5;
+.container > :first-child
+{
+  margin-top:3.8vh;
+  margin-left:50px;
+  transform: rotateY(35deg);
+}
+
+.container > * {
+  margin-top:4.7vh;
 }

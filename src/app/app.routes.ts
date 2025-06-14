@@ -4,7 +4,7 @@ import {GamelistComponent} from './gamelist/gamelist.component';
 import {DetailedGameComponent} from './detailed-game/detailed-game.component';
 
 export const routes: Routes = [
-  { path: "", component:LandingpageComponent},
+  { path: "", component:GamelistComponent},
   { path: "games", component:GamelistComponent},
   { path: "game/:id", component:DetailedGameComponent}
 ];
